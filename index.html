@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="C:\Users\acer\Desktop\altaf gadan\web.bg.mp4" type="video/mp4">
+    </video>
+        <div id="calculator" >
+                <input type="text" id="display" placeholder="0"> 
+            <div id="button">
+                <button onclick="AllclearDisplay('All_clear')" id="clear">Ac</button>
+                <button onclick="apendTodisplay('.')">.</button>
+                <button onclick="apendTodisplay('*')" class="opratorbutton">*</button>
+                <button onclick="apendTodisplay('+')" class="opratorbutton">+</button>
+                <button onclick="apendTodisplay('1')">1</button>
+                <button onclick="apendTodisplay('2')">2</button>
+                <button onclick="apendTodisplay('3')">3</button>
+                <button onclick="apendTodisplay('-')" class="opratorbutton">-</button>
+                <button onclick="apendTodisplay('4')">4</button>
+                <button onclick="apendTodisplay('5')">5</button>
+                <button onclick="apendTodisplay('6')">6</button>
+                <button onclick="apendTodisplay('/')" class="opratorbutton">/</button>
+                <button onclick="apendTodisplay('7')">7</button>
+                <button onclick="apendTodisplay('8')">8</button>
+                <button onclick="apendTodisplay('9')">9</button>
+                <button onclick="calculate('=')">=</button>
+                <button onclick="apendTodisplay('0')">0</button>
+                <button onclick="clearDisplay('clear')" id="clear">C</button>
+                
+                <!-- <button class=""></button>
+                <button class=""></button> -->
+            </div>
+        </div> 
+    </body>
+        <script>
+                const display = document.getElementById("display");
+
+                function apendTodisplay(input){
+                    display.value += input;
+                }
+
+                function AllclearDisplay(){
+                    display.value = "0"
+                }
+
+                function clearDisplay(){
+                    display.value = display.value.slice(0,-1)
+                }
+                function calculate(){
+                    try{
+                        display.value = eval(display.value);
+                    }
+                    catch(error){
+                        display.value = " ";
+                    }
+                }
+        </script>
+
+</html>

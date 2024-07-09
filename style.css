@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+ }
+ body{
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ 
+ #calculator{
+     background-color: transparent;
+     height: 13cm;
+     width: 8cm;
+     margin-top: 3.5cm;
+     margin-left: 16.5cm;
+     border-radius: 15px;
+     background: rgba( 255, 255, 255, 0.2 );
+     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+     backdrop-filter: blur( 10px );
+     border-radius: 10px;
+     border: 2px solid white;
+     transition: all 0.5s;
+ }
+
+ #calculator:hover{
+     box-shadow: 0px 0px 46px 17px rgb(255, 255, 255);
+     transition: all 0.5s;
+ }
+
+ #display{
+     margin-top: 1cm;
+     margin-left: 1.4cm;
+     height: 1cm;
+     width: 5cm;
+     border-radius: 5px;
+     background-color: transparent;
+     color: white;
+     font-size: 25px;
+     border: 2px solid white;
+     font-family: digifaceWide;
+     text-align: end;
+     outline: none;
+     transition: color 1s ease;
+ }
+ ::placeholder{
+     color: white;
+ }
+
+
+ #button{
+     display: grid ;
+     grid-template-columns:repeat(4,1fr) ;
+     margin-top: .7cm;
+ }
+ button{
+     height: 1cm;
+     width: 1cm;
+     margin: 0.5cm;
+     border-radius: 10px;
+     font-size: 25px;
+     background-color: transparent;
+     border: none;
+     color: white;
+     transition: all 0.5s;
+ }
+ button:hover{
+     box-shadow: 0px 0px 20px 6px rgb(255, 255, 255);
+     transition: all 0.5s;
+ }
+ #myVideo{
+     position: fixed;
+     top: 0;
+     left:0;
+
+ }
